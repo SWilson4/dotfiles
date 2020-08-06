@@ -36,6 +36,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " gruvbox configuration
 colorscheme gruvbox
+set background=dark
 
 " vim-airline configuration
 
