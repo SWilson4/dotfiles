@@ -1,31 +1,34 @@
+" This file is for global settings. Filetype-specific settings can be found in
+" $HOME/.config/nvim/after/ftplugin/.
+
 " line numbers on
 set number
 
-" tabs appear as spaces
+" tabs appear as 4 spaces
 set tabstop=4
 " indents are 4 spaces
 set shiftwidth=4
-" expand tabs to spaces
+" expand tabs to spaces; override for specific filetypes if necessary
 set expandtab
 
 " full colour
 set termguicolors
 
+" specific filetype settings
+filetype plugin indent on
+
 call plug#begin()
-" tex preview
-Plug 'lervag/vimtex'
 " colour scheme
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 " filetree
 Plug 'preservim/nerdtree'
 " status line
 Plug 'vim-airline/vim-airline'
+" git in status line
+Plug 'tpope/vim-fugitive'
+" LaTeX complilation and preview
+Plug 'lervag/vimtex', {'for': 'tex'}
 call plug#end()
-
-" vimtex configuration
-
-" so that vimtex loads for LaTeX files
-let g:tex_flavor = 'latex'
 
 " nerdtree configuration
 
