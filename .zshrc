@@ -27,3 +27,5 @@ setopt prompt_subst
 RPROMPT="%F{magenta}\$(git symbolic-ref --short HEAD 2> /dev/null)"
 PROMPT="%F{green}%n@%m:%F{blue}%~\$vsc_info_msg_0_%f%# "
 zstyle ':vcs_info:git:*' formats '%b'
+
+TERM='xterm-256color'
